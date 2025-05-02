@@ -2,7 +2,6 @@ import { useState } from "react";
 import {
   CheckIcon,
   QuestionMarkCircleIcon,
-  StarIcon,
 } from "@heroicons/react/20/solid";
 import { Radio, RadioGroup } from "@headlessui/react";
 import StarReview from "./StarReview.tsx";
@@ -21,11 +20,6 @@ const review = {
     { name: "No", description: "I would not reccommend this place to anyone." },
   ],
 };
-
-function classNames(...classes: string[]) {
-  // Filter out falsy values and join the remaining classes with a space
-  return classes.filter(Boolean).join(" ");
-}
 
 export default function Example() {
   const [selectedOption, setSelectedOption] = useState(review.options[0]);
@@ -71,7 +65,7 @@ export default function Example() {
         </div>
 
         {/* Product form */}
-        <div className="mt-10 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
+        <div className="mt-2 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
           <form>
             <div>
               <StarReview rating={rating} setRating={setRating} />
@@ -130,6 +124,13 @@ export default function Example() {
                 <QuestionMarkCircleIcon
                   aria-hidden="true"
                   className="ml-2 size-5 shrink-0 text-gray-400 group-hover:text-gray-500"
+                  onMouseEnter={() => {
+                    // Show tooltip or additional information
+                    alert(
+                      "Your review will be publicly visible with your username, and is subject to our Terms of Use and Privacy Policy."
+                    );
+                  }
+                  }
                 />
               </a>
             </div>
