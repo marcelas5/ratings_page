@@ -25,6 +25,23 @@ export default function Example() {
   const [selectedOption, setSelectedOption] = useState(review.options[0]);
   const [rating, setRating] = useState(0);
   const [comment, setComment] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+
+const handleSubmit = (e: React.FormEvent) => {
+  e.preventDefault();
+  setSubmitted(true); 
+};
+
+if (submitted) {
+  return (
+    <div>
+      <h1>Thank you for your review!</h1>
+      <p>Your rating: {rating}</p>
+      <p>Your comment: {comment}</p>
+    </div>
+  );
+}
 
 
   return (
@@ -66,7 +83,7 @@ export default function Example() {
 
         {/* Product form */}
         <div className="mt-2 lg:col-start-1 lg:row-start-2 lg:max-w-lg lg:self-start">
-          <form>
+          <form onSubmit={handleSubmit}>
             <div>
               <StarReview rating={rating} setRating={setRating} />
             </div>
