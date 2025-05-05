@@ -91,7 +91,7 @@ if (submitted) {
             <div>
               <StarReview rating={rating} setRating={setRating} />
             </div>
-            <label htmlFor="comment" className="block text-lg font-medium">
+            <label htmlFor="comment" className="block text-lg font-medium mb-2">
               Leave a review:
             </label>
             <textarea
@@ -101,10 +101,10 @@ if (submitted) {
               placeholder="Type your review here..."
               className="w-full h-32 p-2 border border-gray-300 rounded"
             />
-            <div className="sm:flex sm:justify-between">
+            <div className="sm:flex sm:justify-between mt-2">
               {/* Size selector */}
               <fieldset>
-                <legend className="block text-sm font-medium text-gray-700">
+                <legend className="block text-sm font-medium text-gray-700 mb-2 ">
                   I would recommend this place to a friend
                 </legend>
                 <RadioGroup
@@ -155,7 +155,7 @@ if (submitted) {
                 />
               </a>
             </div>
-            <div className="mt-10">
+            <div className="mt-6">
               <button
                 type="submit"
                 className="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50"
