@@ -145,7 +145,7 @@ if (submitted) {
                 <QuestionMarkCircleIcon
                   aria-hidden="true"
                   className="ml-2 size-5 shrink-0 text-gray-400 group-hover:text-gray-500"
-                  onMouseEnter={() => {
+                  onClick={() => {
                     // Show tooltip or additional information
                     alert(
                       "Your review will be publicly visible with your username, and is subject to our Terms of Use and Privacy Policy."
