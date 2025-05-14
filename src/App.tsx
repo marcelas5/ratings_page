@@ -16,8 +16,8 @@ const review = {
   imageAlt:
     "A house with a pool and a view of the mountains",
   options: [
-    { name: "Yes", description: "I would most definitely reccommend this place to a frined." },
-    { name: "No", description: "I would not reccommend this place to anyone." },
+    { name: "Yes", description: "I would most definitely recommend this place to a friend." },
+    { name: "No", description: "I would not recommend this place to anyone." },
   ],
 };
 
